@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('anasayfa');
 });
 
 Route::get('/dashboard', function () {
@@ -22,3 +22,28 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/test', function(){
+    Artisan::call('migrate');
+    Artisan::call('db:seed');
+});
+
+Route::get('/talepler', function () {
+    return view(view:'talepKategorileri');
+});
+
+Route::get('/iletisim', function () {
+    return view(view:'iletisim');
+});
+
+Route::get('/kayitOl', function () {
+    return view(view:'signup');
+});
+
+Route::get('/talepBasvuru', function () {
+    return view(view:'talepOlustur');
+});
+
+Route::get('/taleplerim', function () {
+    return view(view:'talepler');
+});
