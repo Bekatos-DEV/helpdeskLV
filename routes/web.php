@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('anasayfa');
+    return view('home');
 });
 
 Route::get('/dashboard', function () {
@@ -29,11 +29,11 @@ Route::get('/test', function(){
 });
 
 Route::get('/talepler', function () {
-    return view(view:'talepKategorileri');
+    return view(view:'ReportCategories');
 });
 
 Route::get('/iletisim', function () {
-    return view(view:'iletisim');
+    return view(view:'contact');
 });
 
 Route::get('/kayitOl', function () {
@@ -41,9 +41,13 @@ Route::get('/kayitOl', function () {
 });
 
 Route::get('/talepBasvuru', function () {
-    return view(view:'talepOlustur');
+    return view(view:'CreateReport');
 });
 
 Route::get('/taleplerim', function () {
-    return view(view:'talepler');
+    return view(view:'reports');
+});
+
+Route::get('/talepGoster', function () {
+    return view(view:'ShowReports');
 });
