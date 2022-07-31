@@ -1,6 +1,5 @@
 @extends('app.banner')
 @section('kategoriler')
-
             <div class="container">
                 <div class="communities-boxes">
                     <div class="docly-com-box wow fadeInRight" data-wow-delay="0.5s">
@@ -92,4 +91,4 @@
                     <!-- /.docly-com-box -->
                 </div>
             </div>
- @end
+ @endsection

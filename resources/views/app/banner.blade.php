@@ -4,6 +4,8 @@
 <link href="/css/bootstrap-select.min.css" rel="stylesheet"> 
 <link href="/css/animate.css" rel="stylesheet"> 
 
+@yield('kategoriler')
+
 <section class="doc_banner_area_one">
             <img class="p_absolute star" src="img/home_one/banner_bg_two.png" alt="">
             <img class="dark" src="img/home_one/wave_one.svg" alt="">
@@ -20,5 +22,6 @@
             <img class="p_absolute bl_right" src="img/home_one/b_leaf.svg" alt="">
             @yield('home') @yield('content') @yield('ShowReports')
             </section>
+           
             
                
